@@ -9,11 +9,12 @@ public sealed class Animal permits Aquatic, Terrestrial{
 
     //Constructeurs
     public Animal(){}
-    public Animal(String fam, String na, int ag, boolean mammal){
+    public Animal(String fam, String na, int ag, boolean mammal, String rce){
         this.family = fam;
         this.name = na;
         this.age = ag;
         this.mammal = mammal;
+        this.race=rce;
     }
     //Getters and setters
     public String getFamily(){
@@ -22,6 +23,12 @@ public sealed class Animal permits Aquatic, Terrestrial{
 
     public void setFamily(String family){
         this.family = family;
+    }
+    public void getRace(){
+        return this.race
+    }
+    public void setRace(){
+        this.race=rce
     }
 
     public String getName() {
