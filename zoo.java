@@ -49,6 +49,11 @@ public class Zoo {
 
         return false;
     }
+    //Constructeurs
+    public Zoo(String name, String city) {
+        this.name = name;
+        this.city = city;
+        this.animals = new Animal[NBR_CAGES];
     //Search
     int searchAnimal(Animal a) {
         for (int i = 0; i < nbrAnimals; i++) {
@@ -87,5 +92,16 @@ public class Zoo {
                 ", city='" + city + '\'' +
                 ", animals=" + Arrays.toString(animals) +
                 '}';
+    }
+   //Search
+    int searchAnimal(Animal a) {
+        for (int i = 0; i < nbrAnimals; i++) {
+            if(animals[i] != null){
+                if(animals[i].name == a.name){
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 }
